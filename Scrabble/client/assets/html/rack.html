@@ -1,0 +1,13 @@
+<div id="chevalet" class="Chevalet_container" [class.ChevaletContainerAlternative]="isActiveRack === true">
+    <table>
+        <tr>
+            <td *ngFor="let element of rack ; let i = index">
+                <div class="Lettre" [class.selectedLettre]="element === selectedLetter" id="ch{{[i]}}" value="1">
+                    {{element.getLetter()}}
+
+                    <div class="LettreValeur">{{element.getScoreLetter()}}</div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

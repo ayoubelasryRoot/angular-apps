@@ -1,0 +1,192 @@
+{
+	"id": "899d5d80-2114-b446-b0b8-bb32f33f164f",
+	"name": "SudokuPostman",
+	"description": null,
+	"order": [
+		"02e18ae3-b0df-74b1-f72f-f316b8146df5",
+		"49097bda-5c52-cb5d-e09d-a1ac24351244",
+		"c0f6af21-c915-8041-728c-c33f09975aa7",
+		"f4151737-24fb-57e0-fdaf-4655008c6a66",
+		"6118f051-8268-5492-332b-d94d001344c6",
+		"b773b734-d32a-13f0-fa51-df637e1b3b2a",
+		"35d63bee-2ff5-0446-5231-40644054c54e"
+	],
+	"folders": [],
+	"timestamp": 0,
+	"owner": "1486071",
+	"public": false,
+	"requests": [
+		{
+			"id": "02e18ae3-b0df-74b1-f72f-f316b8146df5",
+			"headers": "",
+			"url": "127.0.0.1:3002/api/userscore",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "name",
+					"value": "Mar",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "time",
+					"value": "999999999999999",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "difficulty",
+					"value": "0",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": "var ResponseJSON = JSON.parse(responseBody);\n\ntests[\"Userscore received\"] = responseBody.has(\"scoreAdded\");\ntests[\"Userscore processed\"] = ResponseJSON.scoreAdded === true;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487722824574,
+			"name": "127.0.0.1:3002/api/userscore",
+			"description": "",
+			"collectionId": "899d5d80-2114-b446-b0b8-bb32f33f164f"
+		},
+		{
+			"id": "35d63bee-2ff5-0446-5231-40644054c54e",
+			"headers": "",
+			"url": "127.0.0.1:3002/api/sudokucount",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": "var ResponseJSON = JSON.parse(responseBody);\n\ntests[\"Contains easy value\"] = responseBody.has(\"easy\");\ntests[\"Contains hard value\"] = responseBody.has(\"hard\");\n\nvar schema = {\n \"items\": {\n \"type\": \"number\"\n }\n};\n\ntests[\"Valid easy value\"] = tv4.validate(ResponseJSON, schema);\ntests[\"Valid hard value\"] = tv4.validate(ResponseJSON, schema);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487724183249,
+			"name": "127.0.0.1:3002/api/sudokucount",
+			"description": "",
+			"collectionId": "899d5d80-2114-b446-b0b8-bb32f33f164f",
+			"responses": []
+		},
+		{
+			"id": "49097bda-5c52-cb5d-e09d-a1ac24351244",
+			"headers": "",
+			"url": "127.0.0.1:3002/api/leaderboard",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "var ResponseJSON = JSON.parse(responseBody);\n\ntests[\"Contains easy score\"] = responseBody.has(\"easy\");\ntests[\"Contains hard score\"] = responseBody.has(\"hard\");",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487724446744,
+			"name": "127.0.0.1:3002/api/leaderboard",
+			"description": "",
+			"collectionId": "899d5d80-2114-b446-b0b8-bb32f33f164f"
+		},
+		{
+			"id": "6118f051-8268-5492-332b-d94d001344c6",
+			"headers": "",
+			"url": "127.0.0.1:3002/api/journal",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"key": "name",
+					"value": "ENTERNAME",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "score",
+					"value": "ENTERSCORE",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": "var ResponseJSON = JSON.parse(responseBody);\n\nvar schema = {\n \"items\": {\n \"type\": \"array\"\n }\n};\n\n\ntests[\"Content is an array\"] = tv4.validate(responseBody, schema);\ntests[\"Contains date\"] = responseBody.has(\"date\");\ntests[\"Contains types\"] = responseBody.has(\"types\");\ntests[\"Contains description\"] = responseBody.has(\"description\");",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487724326326,
+			"name": "127.0.0.1:3002/api/journal",
+			"description": "",
+			"collectionId": "899d5d80-2114-b446-b0b8-bb32f33f164f"
+		},
+		{
+			"id": "b773b734-d32a-13f0-fa51-df637e1b3b2a",
+			"headers": "",
+			"url": "127.0.0.1:3002/api/adduser",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "username",
+					"value": "Test12345",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "",
+					"value": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": "var ResponseJSON = JSON.parse(responseBody);\n\ntests[\"Contains isLoggedIn boolean\"] = responseBody.has(\"isLoggedIn\");\ntests[\"Username exists\"] = ResponseJSON.isLoggedIn === false;\ntests[\"Username doesn't exist\"] = ResponseJSON.isLoggedIn === true;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487722560725,
+			"name": "127.0.0.1:3002/api/adduser",
+			"description": "POST request to add user to database.\n\nTest makes sures response contains isLoggedin boolean value.",
+			"collectionId": "899d5d80-2114-b446-b0b8-bb32f33f164f",
+			"responses": []
+		},
+		{
+			"id": "c0f6af21-c915-8041-728c-c33f09975aa7",
+			"headers": "",
+			"url": "127.0.0.1:3002/api/sudokuhard",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "var schema = {\n \"items\": {\n \"type\": \"array\"\n }\n};\n\ntests[\"Response is an array\"] = tv4.validate(responseBody, schema);\ntests[\"Array has holes (0s)\"] = responseBody.has(\"0\");\n\ntests[\"Sudoku database is empty\"] = responseBody === \"null\";",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487724631891,
+			"name": "127.0.0.1:3002/api/sudokuhard",
+			"description": "",
+			"collectionId": "899d5d80-2114-b446-b0b8-bb32f33f164f"
+		},
+		{
+			"id": "f4151737-24fb-57e0-fdaf-4655008c6a66",
+			"headers": "",
+			"url": "127.0.0.1:3002/api/sudokueasy",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": "var schema = {\n \"items\": {\n \"type\": \"array\"\n }\n};\n\ntests[\"Response is an array\"] = tv4.validate(responseBody, schema);\ntests[\"Array has holes (0s)\"] = responseBody.has(\"0\");\n\ntests[\"Sudoku database is empty\"] = responseBody === \"null\";",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1487724628517,
+			"name": "127.0.0.1:3002/api/sudokueasy",
+			"description": "",
+			"collectionId": "899d5d80-2114-b446-b0b8-bb32f33f164f"
+		}
+	]
+}

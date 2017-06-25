@@ -1,0 +1,54 @@
+<body>
+    <md-card>
+        <h2 md-header>Félicitation vous avez réussi!</h2>
+        <h3 md-header>Facile</h3>
+        <md-list>
+            <md-list-item>
+                <div class="itemContainer">
+                    <div class="position">
+                        <h3 md-subheader>#</h3>
+                    </div>
+                    <div class="name">
+                        <h3 md-subheader>Nom</h3>
+                    </div>
+                    <div class="score">
+                        <h3 md-subheader>Score</h3>
+                    </div>
+                </div>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item *ngFor="let score of scoreEasy, let i = index">
+                <div class="itemContainer">
+                    <div class="position">{{i+1}}</div>
+                    <div class="name">{{score.name}}</div>
+                    <div class="score">{{score.time}}</div>
+                </div>
+            </md-list-item>
+        </md-list>
+
+        <h3 md-header>Difficile</h3>
+        <md-list>
+            <md-list-item>
+                <div class="itemContainer">
+                    <div class="position">
+                        <h3 md-subheader>#</h3>
+                    </div>
+                    <div class="name">
+                        <h3 md-subheader>Nom</h3>
+                    </div>
+                    <div class="score">
+                        <h3 md-subheader>Score</h3>
+                    </div>
+                </div>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item *ngFor="let score of scoreHard, let i = index">
+                <div class="itemContainer">
+                    <div class="position">{{i+1}}</div>
+                    <div class="name">{{score.name}}</div>
+                    <div class="score">{{score.time}}</div>
+                </div>
+            </md-list-item>
+        </md-list>
+    </md-card>
+</body>

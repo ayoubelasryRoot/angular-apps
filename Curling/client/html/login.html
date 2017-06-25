@@ -1,0 +1,12 @@
+<md-card class="example-card, largeur_login">
+  <img md-card-image src="../image/3.jpg" />
+  <!--<source de l'image http://www.playdowns.com/wp-content/uploads/2014/08/curling-rocks-ice.jpg"/>-->
+  <md-input-container class="input_width move_top_1">
+    <input (keyup)="onKey($event)" md-input placeholder="Nom de joueur">
+  </md-input-container>
+  <a (click)="login($event)" class="largeur_action" md-raised-button routerLink=".">Se connecter</a>
+  <div *ngIf="this.errorInAuthentication" class="message_error">
+    Ce nom existe déja veuillez choisir un autre!
+  </div>
+
+</md-card>

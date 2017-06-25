@@ -1,0 +1,41 @@
+/* Body selection.html  */
+body{
+    font-family:verdana,helvetica,arial,sans-serif;
+    border:0px; margin:0px; padding:0px;
+    background: black ;
+    height: 1000px;
+    width : 100% ;
+}
+.application{
+    margin:auto;
+}
+
+.message {
+  color: #8cb3f2;
+}
+
+.btn-sq-lg {
+  width: 250px;
+  height: 250px;
+  background-color: black;
+  color: white;
+  font-size: 40px;
+  font-style: bolder;
+  margin: 0px 20px;
+  border: white solid 3px;
+}
+
+.btn-sq-lg:hover {
+  color: #8cb3f2;
+  border: #8cb3f2 solid 3px;
+  background-color: #1c1c1c;
+}
+.conseil
+{
+  color: #8cb3f2;
+  text-align: center;
+margin-top : 100px ;
+margin-bottom: 20px ;
+  font-size: 20px;
+  font-weight: bold;
+}

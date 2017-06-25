@@ -1,0 +1,20 @@
+<body>
+    <table class="application">
+        <tr>
+            <td>
+
+                <div class="conseil"> Attendre les autres joueurs pour vous rejoindre dans la partie ...</div>
+
+                <br><br>
+                <template ngFor let-item [ngForOf]="state" let-i="index">
+                    <div id="player{{(i+1).toString()}}" class= {{state[i]}}><i class="glyphicon glyphicon-user"></i></div>
+                </template>
+
+                <br><br><br>
+
+                <button id="cancel_queue" class="btn btn-danger" [routerLink]="['../../selection']" (click)="removePlayer()"> Changer le nombre de joueur de la partie </button>
+
+            </td>
+        </tr>
+    </table>
+</body>

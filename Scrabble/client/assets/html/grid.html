@@ -1,0 +1,62 @@
+<body>
+    <table>
+        <tr>
+            <td>
+                <div class = "Alphabet"></div>
+            </td>
+            <td>
+                <div *ngFor="let l of header; let k = index">
+                    <span >     <div class = "Alphabet">{{k + 1}}</div>   </span>
+                </div>
+            </td>
+       </tr>
+
+       <tr>
+          <td>
+              <div *ngFor="let l of header; let j = index">
+                  <span >   <div class = "Alphabet">{{header[j]}}</div>  </span>
+              </div>
+          </td>
+          <td>
+                <div class="Scrabble_container">
+                    <div *ngFor="let case of board; let i = index">
+                        <div *ngFor="let element of case; let j = index">
+
+                           <span *ngIf="element === 0">
+                              <div class = "DivRegulier" id="{{id[i][j]}}"> </div>
+                           </span>
+
+                           <span *ngIf="element === 3">
+                              <div class = "DivMotx3" id="{{id[i][j]}}"> Mot x3</div>
+                           </span>
+
+                           <span *ngIf="element === 2">
+                              <div class = "DivMotx2" id="{{id[i][j]}}"> Mot x2</div>
+                           </span>
+
+                           <span *ngIf="element === 12">
+                              <div class = "DivLettrex2" id="{{id[i][j]}}"> Lettre x2</div>
+                           </span>
+
+                           <span *ngIf="element === 13">
+                              <div class = "DivLettrex3" id="{{id[i][j]}}"> Lettre x3</div>
+                           </span>
+
+                          <span *ngIf="element === 1">
+                              <div class = "DivDepart"  id = "{{id[i][j]}}"> </div>
+                          </span>
+
+                          <span *ngIf="element === 6">
+                              <div class = "LettreScrabble" id="{{id[i][j]}}"> {{ matrixLetter[i][j].getLetter() }}
+                                  <div class="LettreValeur">{{ matrixLetter[i][j].getScoreLetter() }}</div>
+                              </div>
+                         </span>
+
+                      </div>
+                      <br/>
+                  </div>
+              </div>
+           </td>
+      </tr>
+  </table>
+</body>

@@ -1,0 +1,17 @@
+<body>
+    <table class="application">
+        <tr>
+            <td>
+                <info-comp #info></info-comp>
+                <reserve-comp></reserve-comp>
+                <chat-comp #chat (changeTurnsEvent)="info.passTurn()" (changeLettersEvent)="rack.requestChangeLetters($event.letter)"
+                (wordValidationEvent)="rack.validateWord($event.word, $event.row, $event.col, $event.direction)"></chat-comp>
+                <rack-comp #rack (errorEvent)="chat.displayErrorMessage($event.code)"></rack-comp>
+            </td>
+
+            <td>
+                <grid-comp #grid></grid-comp>
+            </td>
+        </tr>
+    </table>
+</body>

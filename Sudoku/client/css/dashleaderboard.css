@@ -1,0 +1,35 @@
+html,
+body {
+    min-height: 400px;
+    min-width: 300px;
+    overflow-y: hidden;
+}
+
+.logContainer {
+    max-height: 75vh;
+    overflow-y: scroll;
+}
+
+.itemContainer {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.itemContainer .position {
+    display: inline-block;
+    width: 10%;
+    overflow: hidden;
+}
+
+.itemContainer .name {
+    display: inline-block;
+    width: 40%;
+    overflow: hidden;
+}
+
+.itemContainer .score {
+    display: inline-block;
+    width: 40%;
+    overflow: hidden;
+}

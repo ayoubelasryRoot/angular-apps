@@ -1,0 +1,13 @@
+<body>
+    <md-card>
+        <h3 md-header>Tableau de bord</h3>
+        <h5 md-subheader>Facile : {{count.easy}} | Difficile : {{count.hard}}</h5>
+        <md-divider></md-divider>
+        <md-list class="logContainer">
+            <md-list-item *ngFor="let entry of entries">
+                <h5 md-line>{{entry.date | date:'medium'}}</h5>
+                <p md-line>{{entry.types}} : {{entry.description}}</p>
+            </md-list-item>
+        </md-list>
+    </md-card>
+</body>

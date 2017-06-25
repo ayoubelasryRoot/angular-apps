@@ -1,0 +1,36 @@
+<div class="BoiteCommunicationAlternative">
+    <table>
+        <tr>
+            <td> <input class="chat" #input type="text" name="commande" id="commande" value="!aide" (keyup.enter)="onEnter(input.value)" /> </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="Clavardage">
+                    <div id = "chatBox" *ngFor="let message of messageEnvoye">
+                        <span *ngIf = "message.type == 'normal'">
+                            <span id="nomUtilisateur">{{message.username}}:</span>
+                            <span id="messageTexte"> {{message.text}}</span>
+                        </span>
+                        <span *ngIf = "message.type == 'error'">
+                            <span class="errorMessage"> {{message.text}}</span>
+                        </span>
+                    </div>
+                    <div *ngIf = "isHelpMenuOpen" id = "helpMenuID">
+                        Les 5 commandes pour la boite de saisie :<br/>
+                        <span class="commande">1</span> Placer un mot<br/> &nbsp;
+                        <B>commande</B> !placer ligne colonne (h|v) mot <br/>
+                        <span class="commande">2</span> Changer une lettre<br/> &nbsp;
+                        <B>commande</B> !changer lettre<br/>
+                        <span class="commande">3</span> Passer le tour à un autre joueur<br/> &nbsp;
+                        <B>commande</B> !passer <br/>
+                        <span class="commande">4</span> Afficher menu d’aide<br/> &nbsp;
+                        <B>commande</B> !aide <br/>
+                        <span class="commande">5</span> Quitter menu d’aide<br/> &nbsp;
+                        <B>commande</B> !quitter <br/>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

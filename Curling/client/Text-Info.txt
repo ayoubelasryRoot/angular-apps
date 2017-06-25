@@ -1,0 +1,7 @@
+Racourcis du clavier !
+A et D permette de manipuler l'indicateur du lancement.
+W en restant appuyer sur W la pierre va bouger avec la camera
+ESPACE permet de modifier la position de la camera
+
+lors du déplacement de la pierre, la camera suit cette derniere et se retrouve au dessus.
+appuyer sur la touche espace permet d'avoir une vue en perspective

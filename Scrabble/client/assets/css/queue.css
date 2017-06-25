@@ -1,0 +1,50 @@
+body{
+    font-family:verdana,helvetica,arial,sans-serif;
+    border:0px; margin:0px; padding:0px;
+    background: black ;
+    height: 1000px;
+    width : 100% ;
+}
+.application{
+    margin:auto;
+}
+
+
+.sq-lg-joined {
+  display: inline-block;
+  background-color: #062a66;
+  text-align: center;
+  margin: 0px 20px;
+
+}
+
+.sq-lg-unjoined {
+  display: inline-block;
+  background-color: #062a66;
+  text-align: center;
+  margin: 0px 20px;
+  -webkit-filter: brightness(0.25);
+  filter: brightness(0.25);
+}
+
+.glyphicon-user {
+  font-size: 13em;
+  color: white;
+  vertical-align: bottom;
+  white-space: pre-line;
+}
+
+
+
+.message {
+  color: #8cb3f2;
+}
+.conseil
+{
+  color: #8cb3f2;
+  text-align: center;
+margin-top : 100px ;
+margin-bottom: 20px ;
+  font-size: 20px;
+  font-weight: bold;
+}

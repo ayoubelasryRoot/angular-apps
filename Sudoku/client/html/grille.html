@@ -1,0 +1,59 @@
+<div class="div_component margin_window">
+
+    <md-card class="example-card, largeur_sudoku">
+        <md-card-header>
+            <div md-card-avatar class="example-header-image"></div>
+            <md-card-title>Sudoku game</md-card-title>
+            <md-card-subtitle>{{username}} <br> Niveau : {{level}}</md-card-subtitle>
+        </md-card-header>
+        <br>
+        <div class="sudoku_container">
+            <div *ngFor="let case of matrixInitial; let i = index">
+                <div *ngIf=" ((i)% 3) === 0">
+                    <div style="height: 10px"> </div>
+                </div>
+                <span *ngFor="let element of case; let j = index">
+                    <span *ngIf=" ((j)% 3) === 0">
+                    <span style="margin-left: 5px"></span>
+                </span>
+                <span *ngIf="element === 0">
+                    <input
+                    class = "DivRegulier"
+                    id="{{id[i][j]}}" value=""
+                    (keyup)="onKey($event)"
+                    (click)="clicked($event)"
+                    />
+                    </span>
+                <span *ngIf="element !== 0">
+                    <input class = "DivDisabled"
+                        id="{{id[i][j]}}"
+                        value="{{element}}"
+                        disabled
+                        />
+                    </span>
+                </span>
+                <br>
+            </div>
+        </div>
+    </md-card>
+
+
+    <md-card class="example-card, largeur_sudoku">
+        <md-card-header>
+            <div md-card-avatar class="example-header-image"></div>
+            <md-card-title>Panneau de control</md-card-title>
+        </md-card-header>
+        <a (click)="reset_matrix()" class="button_game_sudoku button_game_reset" md-raised-button routerLink=".">Rénitialiser</a>
+        <br>
+
+        <h5 align="left" class="button_game_sudoku">Nouvelle partie</h5>
+        <a (click)="getMatrixEasy()" class="button_game_sudoku button_game_facile" md-raised-button routerLink=".">Sudoku facile</a>
+        <br>
+        <a (click)="getMatrixHard()" class="button_game_sudoku button_game_difficile" md-raised-button routerLink=".">Sudoku difficle</a>
+
+
+        <timer-sudoku></timer-sudoku>
+
+    </md-card>
+</div>
+<br/>

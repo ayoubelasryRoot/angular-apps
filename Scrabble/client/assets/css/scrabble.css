@@ -1,0 +1,514 @@
+/* Body scrabble.html  */
+body{
+    font-family:verdana,helvetica,arial,sans-serif;
+    border:0px; margin:0px; padding:0px;
+    background: black;
+    height: 840px;
+}
+.application{
+    margin:auto;
+}
+
+/* css plateau du scrabble  grille.html */
+.winner {
+    color: green;
+    font-size: 20px;
+}
+
+.Scrabble_container{
+    border:1px solid black;
+    background: black;
+    margin: auto;
+    width: 782px;
+    height: 782px;
+    border-radius: 5px;
+}
+.Alphabet{
+  border: 1px solid black;
+  text-align: center;
+  margin :2px;
+  width: 48px;
+  height: 48px;
+  font-size: 30px;
+  padding-top : 5px;
+  padding-right: 5px;
+  font-family : "Times New Roman", Georgia, Serif;
+  background-color: black;
+  outline: none;
+  float: left;
+  color : white;
+  border-radius: 5px;
+}
+.DivDepart{
+  color: white;
+  text-align: center;
+  border: 0;
+  margin:2px;
+  width: 48px;
+  height: 48px;
+  font-size: 40px;
+  background-color:gold;
+  outline: none;
+  font-weight: bold;
+  background-image: url("../assets/image/star.png"); /*  http://www.icone-png.com/png/1/585.png   */
+  background-size: cover;
+  float: left;
+  border-radius: 5px;
+}
+.DivExter1{
+  text-align: center;
+  border: 1px solid black;
+  margin:2px;
+  width: 48px;
+  height: 30px;
+  font-size: 25px;
+  background-color: black;
+  outline: none;
+  font-weight: bold;
+  float: left;
+  color : white;
+  border-radius: 5px;
+}
+.DivExter2{
+  border: 1px solid black;
+  text-align: right;
+  margin :2px;
+  width: 48px;
+  height: 48px;
+  font-size: 30px;
+  padding-top : 5px;
+  padding-right: 5px;
+  font-family : "Times New Roman", Georgia, Serif;
+  background-color: black;
+  outline: none;
+  float: left;
+  color : white;
+  border-radius: 5px;
+
+
+}
+.DivExter3{
+  border: 1px solid black;
+  text-align: center;
+  margin:2px;
+  width: 48px;
+  height: 30px;
+  background-color: black;
+  outline: none;
+  font-weight: bold;
+  float: left;
+  border-radius: 5px;
+}
+.DivRegulier{
+    text-align: center;
+    border: 0;
+    margin:2px;
+    width: 48px;
+    border-radius: 5px;
+    height: 48px;
+    font-size: 40px;
+    background-color: GhostWhite;
+    outline: none;
+    font-weight: bold;
+    float: left;
+}
+.DivMotx3{
+    color: black;
+    text-align: center;
+    border: 0;
+    margin:2px;
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+    background-color: #FF4500 ;
+    outline: none;
+    float: left;
+    padding-top: 2px;
+    border-radius: 5px;
+}
+.DivMotx2{
+    color: black;
+    text-align: center;
+    border: 0;
+    margin:2px;
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+    background-color: #FA8072;
+    outline: none;
+    float: left;
+    padding-top: 2px;
+    border-radius: 5px;
+}
+.DivLettrex2 {
+    color: black;
+    text-align: center;
+    border: 0;
+    margin:2px;
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+    background-color: #87CEEB;
+    outline: none;
+    float: left;
+    padding-top: 2px;
+    border-radius: 5px;
+}
+.DivLettrex3 {
+    color: black;
+    text-align: center;
+    border: 0;
+    margin:2px;
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+    background-color: #4169E1;
+    outline: none;
+    float: left;
+    padding-top: 2px;
+    border-radius: 5px;
+}
+
+/* css panneau informatif du scrabble  PanneauInformatif.html */
+.PanneauInformatif{
+    text-align: center;
+    font-weight: bold;
+    font-family:verdana,helvetica,arial,sans-serif;
+    border:1px solid black;
+    background:DarkSlateBlue ;
+    margin-top : 2px;
+    margin-bottom: 4px;
+    width: 400px;
+    height: 30px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+    color : GhostWhite ;
+}
+.Joueur_containerActive{
+    border:1px solid black;
+    background:GhostWhite;
+  margin-top : 0 px;
+    width: 400px;
+    height: 85px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+    margin-bottom: 2px;
+    background-image: url("../assets/image/wood.jpg");
+}
+.Joueur_container{
+    border:1px solid black;
+    background:GhostWhite;
+    margin: auto;
+    width: 400px;
+    height: 50px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+    margin-bottom: 2px;
+    overflow: hidden;
+    background-image: url("../assets/image/wood.jpg");
+}
+.Reserve_container{
+  border:1px solid black;
+  background:GhostWhite;
+  margin: auto;
+  width: 400px;
+  height: 55px;
+  padding : 5px 5px 5px 5px  ;
+  border-radius: 10px 10px 10px 10px;
+  margin-bottom: 8px;
+  background-image: url("../assets/image/wood.jpg");
+}
+
+.MyPlayerContainer {
+    background-image: url("../assets/image/woodSelect.jpg");
+}
+
+.FadeAwayContainer {
+    background-image: url("../assets/image/wood_fade.jpg");
+    color: #5e5e5e;
+}
+
+.Joueur_Info_Nom{
+
+    margin-left: 6px;
+    font-weight: bold;
+}
+.Joueur_ordreActive{
+    text-align: center;
+    border:2px solid black;
+    background:green;
+    margin: auto;
+    width: 25px;
+    height: 25px;
+    color : GhostWhite ;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bold;
+}
+.Reserve-ordre{
+    text-align: center;
+    border:2px solid black;
+    background: Gold;
+    margin: auto;
+    width: 25px;
+    height: 25px;
+    color : black ;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bold;
+}
+.Joueur_ordre{
+    text-align: center;
+    border:2px solid black;
+    background:black;
+    margin: auto;
+    width: 25px;
+    height: 25px;
+    color : GhostWhite ;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bold;
+}
+.Joueur_ordreDisactive{
+    text-align: center;
+    border:2px solid black;
+    background:red;
+    margin: auto;
+    width: 25px;
+    height: 25px;
+    color : GhostWhite ;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bold;
+}
+.Minuterie{
+    text-align: center;
+    border:2px solid black;
+    background: green;
+    margin: auto;
+    width: 80px;
+    height: 28px;
+    padding-top: 2px;
+    border-radius: 8px 8px 8px 8px;
+    font-weight: bold;
+    color : GhostWhite;
+}
+
+/* css boite de communication du scrabble  boiteCommunication.html */
+.chat{
+  font-size: 25px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #C2C2C2;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-color : black;
+    padding: 5px;
+    outline: none;
+    width : 388px;
+}
+.commande{
+  color :white;
+    text-align: center;
+    border:2px solid black;
+    background: DarkSlateBlue ;
+    margin: auto;
+    width: 40px;
+    height: 20px;
+  padding: 2px 2px 2px 2px;
+    border-radius: 6px 6px 6px 6px;
+    font-weight: bold;
+    font-family:verdana,helvetica,arial,sans-serif;
+    font-size: 10px;
+}
+.details{
+    text-align: center;
+    border:2px solid black;
+    background:Orange  ;
+    margin: auto;
+    width: 20px;
+    height: 10px;
+    padding: 3px 3px 3px 3px;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bold;
+    font-family:verdana,helvetica,arial,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color : white;
+    cursor : pointer ;
+}
+.BoiteCommunication{
+    border:1px solid black;
+    background:GhostWhite;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+    background-image: url("../assets/image/wood.jpg"); /* http://www.designbolts.com/wp-content/uploads/2013/02/Free-Seamless-Wood-Textures-Patterns-For-3D-Mapping-2.jpg  */
+    background-size: cover;
+    margin-bottom: 8px;
+}
+.BoiteCommunicationAlternative{
+    border:1px solid black;
+    background:GhostWhite;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+    background-image: url("../assets/image/woodSelect.jpg"); /* http://www.designbolts.com/wp-content/uploads/2013/02/Free-Seamless-Wood-Textures-Patterns-For-3D-Mapping-2.jpg  */
+    background-size: cover;
+    margin-bottom: 8px;
+}
+.Clavardage{
+    border:1px solid black;
+    background:GhostWhite;
+    margin: auto;
+    width: 388px;
+    height: 335px;
+    padding : 4px 4px 4px 4px  ;
+    border-radius: 6px 6px 6px 6px;
+    overflow: scroll;
+    margin-top : 5px;
+}
+
+#nomUtilisateur{
+    font-weight: bold;
+    color : DarkSlateBlue;
+}
+
+#messageTexte{
+    color : black;
+}
+
+.errorMessage{
+    color : red;
+}
+
+/* css chevalet du scrabble  chevalet.html */
+.Lettre{
+    font-family:verdana,helvetica,arial,sans-serif;
+    font-size: 22px;
+    text-align: center;
+    border:1px solid black;
+    background:green;
+     color : black;
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: bold;
+    background-image: url("../assets/image/woodtile.jpg"); /* http://tsarwatches.com/wp-content/uploads/2016/10/MAPLE-WOOD.jpg  */
+    background-size: cover;
+    box-shadow: 1.5px 1.5px ;
+}
+
+
+.LettreScrabble
+{
+  color: black;
+  text-align: center;
+  border: 0px;
+  margin:2px;
+  width: 48px;
+  height: 48px;
+  font-size: 25px;
+  background-color:gold;
+  font-weight: bold;
+  background-image: url("../assets/image/woodtile.jpg");  /* http://tsarwatches.com/wp-content/uploads/2016/10/MAPLE-WOOD.jpg  */
+  background-size: cover;
+  float: left;
+  border-radius: 5px 5px 5px 5px;
+}
+.selectedLettre{
+  font-family:verdana,helvetica,arial,sans-serif;
+  font-size: 22px;
+  text-align: center;
+  border:1px solid black;
+  background:black;
+   color : #B22222;
+  width: 50px;
+  height: 50px;
+  margin-left: 5px;
+  border-radius: 5px 5px 5px 5px;
+  font-weight: bold;
+  background-image: url("../assets/image/woodtile.jpg"); /* http://www.hdbloggers.net/wp-content/uploads/2016/03/Wood-Texture-For-Web-Design.jpg  */
+  background-size: cover;
+  box-shadow: 2px 2px black;
+}
+.LettreS{
+    text-align: center;
+    border: 0;
+    margin:2px;
+    width: 48px;
+    height: 48px;
+    font-size: 30px;
+    background-color: #f5f5f5;
+    outline: none;
+    font-weight: bold;
+    float: left;
+    background-image: url("../assets/image/woodtile.jpg"); /* http://tsarwatches.com/wp-content/uploads/2016/10/MAPLE-WOOD.jpg  */
+}
+.LettreValeur{
+    font-family:verdana,helvetica,arial,sans-serif;
+    font-size: 11px;
+    border:0px solid black;
+    font-weight: bold;
+    text-align: right;
+    width :100%;
+    padding-top: 0px;
+    padding-right: 4px;
+}
+.LettreValeurScrabble{
+    font-family:verdana,helvetica,arial,sans-serif;
+    font-size: 10px;
+    border:0px solid black;
+    font-weight: bold;
+    text-align: right;
+    width :100%;
+    height :100%;
+
+}
+.Decision{
+    font-family:verdana,helvetica,arial,sans-serif;
+    font-size: 25px;
+    text-align: center;
+    border:2px solid black;
+    background:blue;
+    margin: auto;
+    width: 75px;
+    height: 37px;
+    padding : 6px 6px 6px 6px  ;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: bold;
+    background-size: cover;
+    box-shadow: 2px 2px;
+    color : white;
+}
+.Chevalet_container{
+    border:1px solid black;
+    background:GhostWhite;
+    margin: auto;
+    width: 400px;
+    height: 63px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+    background-image: url("../assets/image/wood.jpg"); /* http://www.designbolts.com/wp-content/uploads/2013/02/Free-Seamless-Wood-Textures-Patterns-For-3D-Mapping-2.jpg  */
+    background-size: cover;
+}
+.ChevaletContainerAlternative{
+  border:1px solid black;
+  background:GhostWhite;
+  margin: auto;
+  width: 400px;
+  height: 63px;
+  padding : 5px 5px 5px 5px  ;
+  border-radius: 10px 10px 10px 10px;
+  background-image: url("../assets/image/woodSelect.jpg"); /* http://www.designbolts.com/wp-content/uploads/2013/02/Free-Seamless-Wood-Textures-Patterns-For-3D-Mapping-2.jpg  */
+  background-size: cover;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}

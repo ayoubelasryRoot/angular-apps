@@ -1,0 +1,502 @@
+body
+{
+    font-family:verdana,helvetica,arial,sans-serif;
+    border:0px; margin:0px; padding:0px;
+    height: 940px;
+}
+.application
+{
+
+margin:auto;
+
+}
+.Scrabble_container
+{
+    border:1px solid black;
+    background:black;
+    margin: auto;
+    width: 870px;
+    height: 780px;
+    padding : 5px 5px 5px 5px  ;
+}
+.PanneauInformatif
+{
+    text-align: center;
+    font-weight: bold;
+    font-family:verdana,helvetica,arial,sans-serif;
+  border:1px solid black;
+  background:CornflowerBlue ;
+  margin-top : 0 px;
+  width: 400px;
+  height: 20px;
+  padding : 5px 5px 5px 5px  ;
+  border-radius: 10px 10px 10px 10px;
+  color : GhostWhite ;
+}
+.Joueur_containerActive
+{
+    border:1px solid black;
+    background:GhostWhite;
+  margin-top : 0 px;
+    width: 400px;
+    height: 100px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+}
+.Joueur_container
+{
+    border:1px solid black;
+    background:GhostWhite;
+    margin: auto;
+    width: 400px;
+    height: 58px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.Joueur_ordreActive
+{
+    text-align: center;
+    border:2px solid black;
+    background:green;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bold;
+}
+.Reserve-ordre
+{
+    text-align: center;
+    border:2px solid black;
+    background:Gold ;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bold;
+}
+.Joueur_ordre
+{
+    text-align: center;
+    border:2px solid black;
+    background:grey;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bold;
+}
+.commande
+{
+  color :white;
+    text-align: center;
+    border:2px solid black;
+    background: DarkSlateBlue ;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    padding: 2px 2px 2px 2px;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bold;
+    font-family:verdana,helvetica,arial,sans-serif;
+    font-size: 10px;
+}
+.details
+{
+    text-align: center;
+    border:2px solid black;
+    background:Orange  ;
+    margin: auto;
+    width: 20px;
+    height: 10px;
+    padding: 3px 3px 3px 3px;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bold;
+    font-family:verdana,helvetica,arial,sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color : white;
+    cursor : pointer ;
+}
+.Lettre
+{
+    font-family:verdana,helvetica,arial,sans-serif;
+    font-size: 25px;
+
+    text-align: center;
+    border:2px solid black;
+    background:green;
+    margin: auto;
+    width: 37px;
+    height: 37px;
+    padding : 6px 6px 6px 6px  ;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: bold;
+    background-image: url("../assets/image/woodtile.jpg"); /* http://tsarwatches.com/wp-content/uploads/2016/10/MAPLE-WOOD.jpg  */
+    background-size: cover;
+    box-shadow: 2px 2px;
+}
+.LettreScrabble
+{
+  color: black;
+  text-align: center;
+  border: 0px;
+  margin:2px;
+  width: 48px;
+  height: 48px;
+  font-size: 30px;
+  background-color:gold;
+  font-weight: bold;
+  background-image: url("../assets/image/woodtile.jpg");  /* http://tsarwatches.com/wp-content/uploads/2016/10/MAPLE-WOOD.jpg  */
+  background-size: cover;
+  float: left;
+
+
+}
+.LettreSelectionner
+{
+    font-family:verdana,helvetica,arial,sans-serif;
+    font-size: 25px;
+    cursor : pointer;
+    color : black;
+    text-align: center;
+    border:2px solid black;
+    margin: auto;
+    width: 37px;
+    height: 37px;
+    padding : 6px 6px 6px 6px  ;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: bold;
+    background-image: url("../assets/image/woodselection.jpg"); /* http://www.hdbloggers.net/wp-content/uploads/2016/03/Wood-Texture-For-Web-Design.jpg  */
+    background-size: cover;
+    box-shadow: 2px 2px ;
+}
+
+
+.LettreS
+{
+    text-align: center;
+    border: 0;
+    margin:2px;
+    width: 48px;
+    height: 48px;
+    font-size: 30px;
+    background-color: #f5f5f5;
+    outline: none;
+    font-weight: bold;
+    float: left;
+    background-image: url("../assets/image/woodtile.jpg"); /* http://tsarwatches.com/wp-content/uploads/2016/10/MAPLE-WOOD.jpg  */
+}
+.LettreValeur
+{
+font-family:verdana,helvetica,arial,sans-serif;
+font-size: 10px;
+  border:0px solid black;
+  font-weight: bold;
+    text-align: right;
+    width :100%;
+}
+.LettreValeurScrabble
+{
+font-family:verdana,helvetica,arial,sans-serif;
+font-size: 11px;
+  border:0px solid black;
+  font-weight: bold;
+    text-align: right;
+    width :100%;
+height :100%;
+margin-right: 30px;
+margin-bottom: : 20px;
+}
+.Decision
+{
+    font-family:verdana,helvetica,arial,sans-serif;
+    font-size: 25px;
+    text-align: center;
+    border:2px solid black;
+    background:blue;
+    margin: auto;
+    width: 75px;
+    height: 37px;
+    padding : 6px 6px 6px 6px  ;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: bold;
+    background-size: cover;
+    box-shadow: 2px 2px;
+    color : white;
+}
+.Minuterie
+{
+    text-align: center;
+    border:2px solid black;
+    background: green;
+    margin: auto;
+    width: 100px;
+    height: 20px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+    font-weight: bold;
+    color : white;
+}
+.Chevalet_container
+{
+    border:1px solid black;
+    background:GhostWhite;
+    margin: auto;
+    width: 400px;
+    height: 60px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+    background-image: url("../assets/image/wood.jpg"); /* http://www.designbolts.com/wp-content/uploads/2013/02/Free-Seamless-Wood-Textures-Patterns-For-3D-Mapping-2.jpg  */
+    background-size: cover;
+}
+.Chevalet_containerAlternative
+{
+    border:1px solid black;
+    background:GhostWhite;
+    margin: auto;
+    width: 400px;
+    height: 60px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+    background-image: url("../assets/image/woodSelect.jpg"); /* http://www.designbolts.com/wp-content/uploads/2013/02/Free-Seamless-Wood-Textures-Patterns-For-3D-Mapping-2.jpg  */
+    background-size: cover;
+}
+
+.BoiteCommunication2
+{
+    border:1px solid black;
+    background:GhostWhite;
+    margin: auto;
+    width: 400px;
+    height: 395px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+    background-image: url("../assets/image/wood.jpg"); /* http://www.designbolts.com/wp-content/uploads/2013/02/Free-Seamless-Wood-Textures-Patterns-For-3D-Mapping-2.jpg  */
+    background-size: cover;
+}
+.BoiteCommunication3
+{
+    border:1px solid black;
+    background:GhostWhite;
+    margin: auto;
+    width: 400px;
+    height: 328px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+    background-image: url("../assets/image/wood.jpg"); /* http://www.designbolts.com/wp-content/uploads/2013/02/Free-Seamless-Wood-Textures-Patterns-For-3D-Mapping-2.jpg  */
+    background-size: cover;
+}
+.BoiteCommunication4
+{
+    border:1px solid black;
+    background:GhostWhite;
+    margin: auto;
+    width: 400px;
+    height: 270px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+    background-image: url("../assets/image/wood.jpg"); /* http://www.designbolts.com/wp-content/uploads/2013/02/Free-Seamless-Wood-Textures-Patterns-For-3D-Mapping-2.jpg  */
+    background-size: cover;
+}
+.BoiteCommunication4Alternative
+{
+    border:1px solid black;
+    background:GhostWhite;
+    margin: auto;
+    width: 400px;
+    height: 270px;
+    padding : 5px 5px 5px 5px  ;
+    border-radius: 10px 10px 10px 10px;
+    background-image: url("../assets/image/woodSelect.jpg"); /* http://www.designbolts.com/wp-content/uploads/2013/02/Free-Seamless-Wood-Textures-Patterns-For-3D-Mapping-2.jpg  */
+    background-size: cover;
+}
+.Cavardage
+{
+    border:1px solid black;
+    background:GhostWhite;
+    margin: auto;
+    width: 390px;
+    height: 215px;
+    padding : 2px 2px 2px 2px  ;
+    border-radius: 10px 10px 10px 10px;
+    overflow: scroll;
+}
+.aide_container
+{
+text-align: center;
+border:2px solid black;
+background:blue;
+margin: auto;
+width: 60px;
+height: 20px;
+color : white;
+border-radius: 10px 10px 10px 10px;
+font-weight: bold;
+margin : 0 px;
+}
+.aide
+{
+  font-size: 25px;
+  color : white ;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border: 1px solid black;
+  background-color : CornflowerBlue ;
+  font-weight: bold;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  padding: 5px;
+  outline: none;
+}
+
+
+.DivDepart
+{
+  color: green;
+  text-align: center;
+  border: 0;
+  margin:2px;
+  width: 48px;
+  height: 48px;
+  font-size: 40px;
+  background-color:gold;
+  outline: none;
+  font-weight: bold;
+  background-image: url("../assets/image/star.png"); /*  http://www.icone-png.com/png/1/585.png   */
+  background-size: cover;
+  float: left;
+}
+.DivExter1
+{
+  text-align: center;
+  border: 0;
+  margin:2px;
+  width: 48px;
+  height: 30px;
+  font-size: 25px;
+  background-color: black;
+  outline: none;
+  font-weight: bold;
+  float: left;
+  color : white;
+  text-align: center;
+}
+.DivExter2
+{
+  text-align: center;
+  border: 0;
+  width: 48px;
+  height: 48px;
+  font-size: 40px;
+  font-family : "Times New Roman", Georgia, Serif;
+  background-color: black;
+  outline: none;
+  float: left;
+  color : white;
+  text-align: center;
+  vertical-align: bottom;
+
+}
+.DivExter3
+{
+  text-align: center;
+  border: 0;
+  margin:2px;
+  width: 48px;
+  height: 30px;
+  font-size: 40px;
+  background-color: black;
+  outline: none;
+  font-weight: bold;
+  float: left;
+}
+
+input
+{
+  font-size: 25px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #C2C2C2;
+    box-shadow: 1px 1px 4px #EBEBEB;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-color : black;
+    padding: 5px;
+    outline: none;
+    width : 395px;
+}
+
+.DivRegulier
+{
+    text-align: center;
+    border: 0;
+    margin:2px;
+    width: 48px;
+    height: 48px;
+    font-size: 40px;
+    background-color: #f5f5f5;
+    outline: none;
+    font-weight: bold;
+    float: left;
+}
+.DivMotx3
+{
+    color: black;
+    text-align: center;
+    border: 0;
+    margin:2px;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    background-color: Crimson ;
+    outline: none;
+    float: left;
+}
+.DivMotx2
+{
+    color: black;
+    text-align: center;
+    border: 0;
+    margin:2px;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    background-color: #FA8072;
+    outline: none;
+    float: left;
+}
+
+.DivLettrex2 {
+    color: black;
+    text-align: center;
+    border: 0;
+    margin:2px;
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+    background-color: #87CEEB;
+    outline: none;
+    float: left;
+}
+.DivLettrex3 {
+    color: black;
+    text-align: center;
+    border: 0;
+    margin:2px;
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+    background-color: #4169E1;
+    outline: none;
+     float: left;
+}

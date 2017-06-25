@@ -1,0 +1,70 @@
+<div class="PanneauInformatif">
+    Information du jeu
+</div>
+
+<span *ngFor="let element of players; let i = index">
+
+    <span *ngIf = "element.priority === 1">
+        <div class = "Joueur_containerActive" [class.MyPlayerContainer]="element.equal(myPlayer)" [class.FadeAwayContainer]="!players[i].getIsConnected()">
+
+            <table>
+                <tr>
+                    <td *ngIf = "element.priority === 1">
+                        <div class = "Joueur_ordreActive"> {{i + 1}} </div>
+                    </td>
+
+                    <td> <span class = "Joueur_Info_Nom"> {{players[i].getName()}} </span> </td>
+<td></td>
+</tr>
+
+<tr>
+    <td> </td>
+    <td> score : {{players[i].getScore()}} </td>
+    <td *ngIf="players[i].getNbTiles() < 7"> remaining tiles : {{players[i].getNbTiles()}} </td>
+    <td class = "winner" *ngIf="players[i].getWinner()"> WINNER! </td>
+    <td> </td>
+</tr>
+
+<tr>
+    <td> </td>
+    <td>
+        <timer-comp></timer-comp>
+    </td>
+    <td> </td>
+</tr>
+</table>
+</div>
+</span>
+
+<span *ngIf="element.priority === 0">
+        <div class = "Joueur_container" [class.MyPlayerContainer]="element.equal(myPlayer)" [class.FadeAwayContainer]="!players[i].getIsConnected()">
+
+            <table>
+                <tr>
+
+                    <td *ngIf = "element.priority === 0">
+                        <div class = "Joueur_ordre"> {{i + 1}} </div>
+                    </td>
+                    <td> <span class = "Joueur_Info_Nom"> {{players[i].getName()}} </span> </td>
+<td></td>
+</tr>
+
+<tr>
+    <td> </td>
+    <td> score : {{players[i].getScore()}} </td>
+    <td *ngIf="players[i].getNbTiles() < 7"> remaining tiles : {{players[i].getNbTiles()}} </td>
+    <td class = "winner" *ngIf="players[i].getWinner()"> WINNER! </td>
+    <td> </td>
+</tr>
+
+<tr>
+    <td> </td>
+    <td>
+        <timer-comp></timer-comp>
+    </td>
+    <td> </td>
+</tr>
+</table>
+</div>
+</span>
+</span>

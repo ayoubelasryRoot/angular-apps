@@ -1,0 +1,21 @@
+<body>
+    <table class="application">
+        <tr>
+            <td>
+                <div>
+                    <div class="conseil"> Choisir le nombre des joueurs dans la partie du scrabble </div>
+
+                    <div>
+                        <button class="btn btn-sq-lg" [routerLink]="['../queue', 2]" routerLinkActive="active" value="2" (click)="addUserToRoom($event)"> 2 Joueurs </button>
+                        <button class="btn btn-sq-lg" [routerLink]="['../queue', 3]" routerLinkActive="active" value="3" (click)="addUserToRoom($event)"> 3 Joueurs </button>
+                        <button class="btn btn-sq-lg" [routerLink]="['../queue', 4]" routerLinkActive="active" value="4" (click)="addUserToRoom($event)"> 4 joueurs </button>
+                    </div>
+
+                    <br><br><br>
+
+                    <button class="btn btn-primary" [routerLink]="['../login']" routerLinkActive="active"> Retour </button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>

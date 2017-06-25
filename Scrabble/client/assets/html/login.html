@@ -1,0 +1,17 @@
+<body>
+  <md-card class="example-card, largeur_login">
+    <img md-card-image src="../assets/image/3.jpg" />
+
+    <!--<img class="move_top_cin" src="../imgs/account.png"/>-->
+    <md-input-container class="input_width move_top_1">
+      <input #box (keyup)="onKey($event)" (keyup.enter)="login(box.value)" md-input placeholder="Username">
+    </md-input-container>
+
+    <a (click)="login($event)" class="largeur_action" md-raised-button routerLink=".">Login</a>
+
+    <div *ngIf="this.errorInAuthentication" class="message_error">
+      Ce nom existe déja veuillez choisir un autre!
+    </div>
+
+  </md-card>
+</body>
